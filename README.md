@@ -24,19 +24,20 @@ The project also includes **JWT-based authentication** and **bcrypt password has
 ## 📂 Project Structure
 
 notes-api/
-│── cmd/                     
+│── cmd/                     # (optional: for CLI entry points)
+│
 │── internal/
-│   ├── db/                  
+│   ├── db/                  # Database connection logic
 │   │   └── db.go
 │   │
-│   ├── middleware/
+│   ├── middleware/          # Middleware (JWT, etc.)
 │   │   └── jwt.go
 │   │
-│   ├── models/
+│   ├── models/              # Data models (User, Note)
 │   │   ├── user.go
 │   │   └── note.go
 │   │
-│   └── handlers/
+│   └── handlers/            # Handlers grouped by domain
 │       ├── notes/           # Notes-related routes
 │       │   └── notes.go
 │       │
