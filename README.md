@@ -24,13 +24,26 @@ The project also includes **JWT-based authentication** and **bcrypt password has
 ## 📂 Project Structure
 
 notes-api/
-│── cmd/
+│── cmd/                     
 │── internal/
-│ ├── db/
-│ ├── middleware/
-│ ├── models/
-│ └── handlers/
+│   ├── db/                  
+│   │   └── db.go
+│   │
+│   ├── middleware/
+│   │   └── jwt.go
+│   │
+│   ├── models/
+│   │   ├── user.go
+│   │   └── note.go
+│   │
+│   └── handlers/
+│       ├── notes/           # Notes-related routes
+│       │   └── notes.go
+│       │
+│       └── users/           # User-related routes
+│           └── users.go
+│
 │── go.mod
 │── go.sum
 │── README.md
-│── main.go
+│── main.go                  # App entrypoint (router + wiring)
