@@ -4,10 +4,10 @@ import (
 	"github.com/gin-gonic/gin"
 
 	"github.com/DigdarshanMohanty/notes-api/internal/db"
+	"github.com/DigdarshanMohanty/notes-api/internal/handlers/notes"
+	"github.com/DigdarshanMohanty/notes-api/internal/handlers/users"
 	"github.com/DigdarshanMohanty/notes-api/internal/middleware"
 	"github.com/DigdarshanMohanty/notes-api/internal/models"
-	"github.com/DigdarshanMohanty/notes-api/internal/notes"
-	"github.com/DigdarshanMohanty/notes-api/internal/users"
 )
 
 func main() {
