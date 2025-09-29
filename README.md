@@ -21,16 +21,30 @@ The project also includes **JWT-based authentication** and **bcrypt password has
 - **Bcrypt** (Password hashing)
 - **godotenv** (Environment variable management)
 
-# API Endpoints
+## 📡 API Endpoints
 
-Auth
-Method	Endpoint	Description
-POST	/register	Register new user
-POST	/login	Login and get JWT token
-Notes
-Method	Endpoint	Description
-GET	/notes	Get all notes (JWT required)
-GET	/notes/:id	Get a single note
-POST	/notes	Create a new note
-PUT	/notes/:id	Update a note
-DELETE	/notes/:id	Delete a note
+### 🔑 Authentication
+
+| Method | Endpoint   | Description          | Auth Required |
+|--------|-----------|----------------------|---------------|
+| POST   | `/register` | Register a new user   | ❌ No |
+| POST   | `/login`    | Login and get JWT     | ❌ No |
+
+---
+
+### USers (JWT required)
+
+| Method | Endpoint        | Description            | Auth Required |
+|--------|----------------|------------------------|---------------|
+| POST   | `/user/:id`       | Display user details      | ✅ Yes |
+
+---
+
+### Notes (JWT required)
+
+| Method | Endpoint        | Description            | Auth Required |
+|--------|----------------|------------------------|---------------|
+| POST   | `/notes`       | Create a new note      | ✅ Yes |
+| GET    | `/notes`       | Get all notes (user)   | ✅ Yes |
+| PATCH    | `/notes/:id`   | Update a note          | ✅ Yes |
+| DELETE | `/notes/:id`   | Delete a note          | ✅ Yes |
