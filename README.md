@@ -21,9 +21,9 @@ The project also includes **JWT-based authentication** and **bcrypt password has
 - **Bcrypt** (Password hashing)
 - **godotenv** (Environment variable management)
 
-## 📡 API Endpoints
+## API Endpoints
 
-### 🔑 Authentication
+### Authentication
 
 | Method | Endpoint   | Description          | Auth Required |
 |--------|-----------|----------------------|---------------|
@@ -32,13 +32,12 @@ The project also includes **JWT-based authentication** and **bcrypt password has
 
 ---
 
-### USers (JWT required)
+### Users (JWT required)
 
 | Method | Endpoint        | Description            | Auth Required |
 |--------|----------------|------------------------|---------------|
 | POST   | `/user/:id`       | Display user details      | ✅ Yes |
 
----
 
 ### Notes (JWT required)
 
