@@ -13,7 +13,7 @@ The project also includes **JWT-based authentication** and **bcrypt password has
 - PostgreSQL integration with GORM ORM
 - Configurable using `.env` file
 
-## 🛠️ Tech Stack
+##  Tech Stack
 - **Go** (Gin framework)
 - **GORM** (ORM for PostgreSQL)
 - **PostgreSQL** (Database)
@@ -21,31 +21,16 @@ The project also includes **JWT-based authentication** and **bcrypt password has
 - **Bcrypt** (Password hashing)
 - **godotenv** (Environment variable management)
 
-## 📂 Project Structure
+# API Endpoints
 
-.
-├── notes-api/
-├── │── cmd/ # (optional: for CLI entry points)
-├── │
-├── │── internal/
-├── │ ├── db/ # Database connection logic
-├── │ │ └── db.go
-├── │ │
-├── │ ├── middleware/ # Middleware (JWT, etc.)
-├── │ │ └── jwt.go
-├── │ │
-├── │ ├── models/ # Data models (User, Note)
-├── │ │ ├── user.go
-├── │ │ └── note.go
-├── │ │
-├── │ └── handlers/ # Handlers grouped by domain
-├── │ ├── notes/ # Notes-related routes
-├── │ │ └── notes.go
-├── │ │
-├── │ └── users/ # User-related routes
-├── │ └── users.go
-├── │
-├── │── go.mod
-├── │── go.sum
-├── │── README.md
-└── │── main.go # App entrypoint (router + wiring)
+Auth
+Method	Endpoint	Description
+POST	/register	Register new user
+POST	/login	Login and get JWT token
+Notes
+Method	Endpoint	Description
+GET	/notes	Get all notes (JWT required)
+GET	/notes/:id	Get a single note
+POST	/notes	Create a new note
+PUT	/notes/:id	Update a note
+DELETE	/notes/:id	Delete a note
